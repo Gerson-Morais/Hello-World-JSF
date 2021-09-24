@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+
+    <f:loadBundle basename="application" var="msg"/>
+    <head>
+        <title>
+            <h:outputText value="#{msg.welcomeTitle}"/>
+        </title>
+    </head>
+    <h:body>
+
+        <h3><h:outputText value="#{msg.helloHeading}"/></h3>
+
+        <h:dataTable value="#{helloWorldBean.helloWorlds}" var="hellob" border="1">
+            <h:column>#{hellob.firstName}</h:column>
+            <h:column>#{hellob.lastName}</h:column>
+        </h:dataTable>
+
+        <p><h:outputText value="#{msg.helloMessage}"/></p>
+    </h:body>
+
+</html>
